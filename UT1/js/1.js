@@ -1,6 +1,8 @@
 /* Tipos de mensajes */
 
 //Mensaje por pantalla
-alert('Hola mundo');  
+//alert('Hola mundo');  
 //Mensaje por consola
-console.log("Hola mundo");
+for (var i=0; i<3; i++){
+    console.log("Hola mundo");
+}
