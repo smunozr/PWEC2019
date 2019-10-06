@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>Ventana 1</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ventana1</title>
+</head>
+<body>
+    <p id="pEjemplo">Ejemplo</p>
+    <button id="btnAbrir">
+        Abre Ventana
+    </button>
+    <script>
+        var btnAbrir = document.getElementById("btnAbrir");
+        btnAbrir.addEventListener("click", fAbrir);
+
+        function fAbrir() {
+            var valorP = document.getElementById("pEjemplo").innerText;
+            window.open("ventana2.html?var1="+valorP,"target");
+        }
+    
+    </script>
+</body>
+</html>
