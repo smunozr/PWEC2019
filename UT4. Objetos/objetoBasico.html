@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<button id="Objeto1">Objeto 1</button>
+	<button id="Objeto2">Objeto 2</button>
+	<button id="Objeto3">Objeto 3</button>
+	<script>
+		var boton1 = document.getElementById("Objeto1");
+		var boton2 = document.getElementById("Objeto2");
+		var boton3 = document.getElementById("Objeto3");
+		
+		boton1.addEventListener("click", fBoton1);
+		boton2.addEventListener("click", fBoton2);
+		boton3.addEventListener("click", fBoton3);
+		
+		function fBoton1 () {
+			//Forma 1
+			var obj = {
+				valor : 5,
+				metodo: function () {
+					alert("Objeto 1");
+				}
+			}
+			console.log (obj.valor);
+		}
+		
+		function fBoton2 () {
+		//Forma 2
+			var obj2 = new Object({
+					valor:7,
+					metodo: function () {
+						alert ("Objeto 2");
+						}
+					});
+			obj2.metodo();
+		}
+		
+		function fBoton3 () {
+			//Forma3 
+			class obj3 {
+				constructor (nombre) {
+					this.nombre = nombre;
+				}
+				metodo() {
+					alert ("Objeto 3");
+				}
+			}
+			//Realizamos una instancia
+			let nombre = new obj3('Carlos')
+			nombre.metodo();
+		}
+	</script>
+</body>
+</html>
